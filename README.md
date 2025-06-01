@@ -1,10 +1,10 @@
 # EXECUTION-OF-TIMER-OPERATIONS-USING-LADDER-LOGIC-PROGRAMMING
 
 
- #### NAME :
- #### REGISTER NUMBER :
- #### DEPARTMENT 
- #### YEAR 
+ #### NAME : UDHAYA SANKARAN M
+ #### REGISTER NUMBER :212222110051
+ #### DEPARTMENT: CSE(IOT)
+ #### YEAR: III YEAR
 
  
 # Aim:
@@ -23,18 +23,20 @@ Timers in PLCs are used to introduce delays in control processes. They are funda
 such as starting a motor after a delay, turning off a light after a specified time, or maintaining a state for a fixed duration.
 
 # Types of Timers:
- 1. ON-Delay Timer (TON)
+ 1. ON-Delay Timer (TON)   
 Functionality:
 
 The ON-delay timer starts timing when the input condition becomes TRUE (ON).
 After the preset time has elapsed, the timer output becomes TRUE (ON).
 If the input condition turns FALSE (OFF) before the timer completes, the timer resets, and the output remains FALSE.
+
 2. OFF-Delay Timer (TOF)
 Functionality:
 
 The OFF-delay timer starts timing when the input condition turns FALSE (OFF).
 The timer output remains TRUE (ON) during the preset delay time and then turns FALSE (OFF) after the time has elapsed.
 If the input condition becomes TRUE (ON) during the timing process, the timer resets.
+
 3. Retentive ON-Delay Timer (RTO)
 Functionality:
 
@@ -42,11 +44,13 @@ The Retentive ON-delay timer accumulates time as long as the input condition is 
 The accumulated time is retained even if the input condition turns FALSE (OFF).
 The timer continues from the accumulated time when the input condition becomes TRUE again.
 A separate reset input is usually provided to clear the accumulated time.
+
 4. Pulse Timer (TP or TONR)
 Functionality:
 
 The Pulse Timer generates an output pulse of a specific duration when the input condition becomes TRUE (ON).
 The output remains TRUE for the preset duration, regardless of the input state.
+
 5. Timer-On Interval (TONI)
 Functionality:
 
@@ -55,45 +59,39 @@ The timer counts up as long as the input is TRUE and resets when the input turns
 
  
 # Procedure:
-Setup the PLC Programming Environment:
+#### Setup the PLC Programming Environment:
 
 Connect the PLC to the computer and launch the PLC programming software.
 Ensure all input and output devices are connected to the PLC’s I/O modules.
-Create Ladder Logic for Timers:
+
+#### Create Ladder Logic for Timers:
 
 Implement the ON-delay timer (TON) by creating a rung with an input (e.g., a push button) linked to a TON instruction. Set the preset time (e.g., 5 seconds).
 Implement the OFF-delay timer (TOF) by creating a rung with an input linked to a TOF instruction. Set the preset time (e.g., 5 seconds).
 Implement the Retentive Timer (RTO) by creating a rung with an input linked to an RTO instruction. Set the preset time and enable an additional rung to reset the timer when required.
-Simulate the Ladder Logic:
+#### Simulate the Ladder Logic:
 
 Run the simulation in the PLC software.
 Test the ON-delay timer by pressing the input button and observing the delay before the output is activated.
 Test the OFF-delay timer by deactivating the input and observing the delay before the output turns off.
 Test the Retentive Timer by toggling the input on and off, observing how the accumulated time is retained.
-Download and Execute:
+#### Download and Execute:
 
 Download the ladder logic program to the PLC if available and run it.
 Test the timers with the physical push buttons and observe the LEDs or other output devices.
 #   Outputs:
-ON-Delay Timer: The output LED or indicator should turn on after a specified delay (e.g., 5 seconds) once the input is activated.
+ON-Delay Timer: The output LED or indicator should turn on after a specified delay (e.g., 6 seconds) once the input is activated.
+
 OFF-Delay Timer: The output should remain on for the specified delay after the input is deactivated, and then it should turn off.
+
 Retentive Timer: The output should turn on after the accumulated time reaches the preset value, and it should retain the accumulated time even if the input is turned off.
 
 
-# Simulation Screenshots 
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Simulation Screenshots:
+### ON-Delay Timer:
+![Screenshot 2024-08-30 093234](https://github.com/user-attachments/assets/8e66eaee-2370-4d86-868f-bd745ba68c70)
+### OFF-Delay Timer:
+![Screenshot 2024-08-30 093140](https://github.com/user-attachments/assets/cf1915b3-4a77-4330-90d8-4a7f763fc75c)
 
 
 # Results:
